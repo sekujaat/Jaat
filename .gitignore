@@ -1,0 +1,46 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# React Native / Android / iOS
+android/.gradle/
+android/app/build/
+android/build/
+ios/Pods/
+ios/build/
+*.iml
+*.keystore
+*.jks
+
+# Xcode
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+DerivedData/
+*.xcworkspace
+
+# Metro, bundler
+.expo/
+.expo-shared/
+dist/
+build/
+
+# Env / secrets
+.env
+.env.*
+*.key
+*.pem
+
+# Misc
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>CFBundleDisplayName</key>
+  <string>Synce</string>
+  <key>CFBundleIdentifier</key>
+  <string>com.yourcompany.synce</string>
+  <key>CFBundleName</key>
+  <string>Synce</string>
+  <key>CFBundleVersion</key>
+  <string>1</string>
+  <key>CFBundleShortVersionString</key>
+  <string>1.0.0</string>
+
+  <key>UILaunchStoryboardName</key>
+  <string>LaunchScreen</string>
+
+  <key>UIRequiresPersistentWiFi</key>
+  <false/>
+  <key>UIRequiresFullScreen</key>
+  <true/>
+
+  <!-- Camera + mic for Agora -->
+  <key>NSCameraUsageDescription</key>
+  <string>Synce needs access to your camera for video calls.</string>
+  <key>NSMicrophoneUsageDescription</key>
+  <string>Synce needs access to your microphone for calls.</string>
+
+  <!-- Location (optional, for locationService) -->
+  <key>NSLocationWhenInUseUsageDescription</key>
+  <string>Synce uses location to show relevant connections.</string>
+
+  <key>UIViewControllerBasedStatusBarAppearance</key>
+  <false/>
+
+  <key>LSRequiresIPhoneOS</key>
+  <true/>
+  <key>UIAppFonts</key>
+  <array/>
+</dict>
+</plist>

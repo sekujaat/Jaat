@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lion Sync</string>
+    <string name="main_title">Welcome, Lion!</string>
+    <string name="main_subtitle">Manage your premium plans here.</string>
+    <string name="btn_continue">Continue</string>
+    <string name="btn_maybe_later">Maybe later</string>
+    <string name="empty_message">No active plan yet.</string>
+</resources>

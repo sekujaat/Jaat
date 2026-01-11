@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Internal files/images folder -->
+    <files-path
+        android:name="internal_images"
+        android:path="images/" />
+
+    <!-- Cache folder share (optional) -->
+    <cache-path
+        android:name="cache_files"
+        android:path="cache/" />
+
+    <!-- External app-specific pictures folder -->
+    <external-files-path
+        android:name="external_pictures"
+        android:path="Pictures/" />
+
+</paths>

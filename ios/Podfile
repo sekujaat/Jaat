@@ -1,0 +1,32 @@
+platform :ios, '12.0'
+require_relative '../node_modules/react-native/scripts/react_native_pods'
+require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+
+target 'Synce' do
+  config = use_native_modules!
+
+  use_react_native!(
+    :path => config[:reactNativePath],
+    :hermes_enabled => true
+  )
+
+  # AdMob (Google-Mobile-Ads-SDK)
+  pod 'Google-Mobile-Ads-SDK'
+
+  # Agora RTC (agar cocoapods se use karna chahoge)
+  # pod 'AgoraRtcEngine_iOS', '4.2.0' # example version
+
+  # Other required pods are added automatically by React Native
+end
+
+target 'SynceTests' do
+  inherit! :complete
+end
+
+target 'SynceUITests' do
+  inherit! :complete
+end
+
+post_install do |installer|
+  react_native_post_install(installer)
+end

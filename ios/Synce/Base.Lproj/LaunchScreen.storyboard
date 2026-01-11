@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB"
+  version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch"
+  propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+  <scenes>
+    <!--Launch Screen-->
+    <scene sceneID="launchScene">
+      <objects>
+        <viewController id="launchVC" sceneMemberID="viewController">
+          <view key="view" contentMode="scaleToFill" id="launchView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <color key="backgroundColor" red="0.96" green="0.97" blue="0.99" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+              <label opaque="NO" userInteractionEnabled="NO"
+                     text="Synce" textAlignment="center"
+                     translatesAutoresizingMaskIntoConstraints="NO"
+                     id="titleLabel">
+                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                <color key="textColor" red="0.15" green="0.27" blue="0.66" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+              </label>
+            </subviews>
+            <constraints>
+              <constraint firstItem="titleLabel" firstAttribute="centerX"
+                          secondItem="launchView" secondAttribute="centerX" id="centerX"/>
+              <constraint firstItem="titleLabel" firstAttribute="centerY"
+                          secondItem="launchView" secondAttribute="centerY" id="centerY"/>
+            </constraints>
+          </view>
+        </viewController>
+        <placeholder placeholderIdentifier="IBFirstResponder"
+                     id="firstResponder" userLabel="First Responder" sceneMemberID="firstResponder"/>
+      </objects>
+    </scene>
+  </scenes>
+</document>

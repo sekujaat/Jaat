@@ -1,0 +1,17 @@
+apply plugin: "com.android.application"
+
+android {
+    namespace "com.synce"        // apna package name
+    compileSdkVersion 34
+
+    defaultConfig {
+        applicationId "com.synce"
+        minSdkVersion 23
+        targetSdkVersion 34
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+dependencies {
+}
