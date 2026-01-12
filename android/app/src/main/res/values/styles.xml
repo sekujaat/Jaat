@@ -1,26 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- App overall theme -->
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowBackground">@color/colorBackground</item>
-    </style>
+    <!-- App ka main theme -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary colors, agar chahe to colors.xml ke hisaab se change kar sakta hai -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
 
-    <!-- Primary button style -->
-    <style name="Widget.Lion.Button.Primary" parent="Widget.MaterialComponents.Button">
-        <item name="android:background">@drawable/btn_primary_bg</item>
-        <item name="android:textColor">@color/colorTextPrimary</item>
-        <item name="android:textAllCaps">false</item>
-    </style>
+        <item name="android:statusBarColor">@color/purple_700</item>
 
-    <!-- Secondary button style -->
-    <style name="Widget.Lion.Button.Secondary" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="android:background">@drawable/btn_secondary_bg</item>
-        <item name="android:textColor">@color/colorAccent</item>
-        <item name="android:textAllCaps">false</item>
+        <!-- Buttons ke liye MaterialComponents styles allow -->
+        <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button</item>
+        <item name="materialButtonOutlinedStyle">@style/Widget.MaterialComponents.Button.OutlinedButton</item>
     </style>
 
 </resources>
