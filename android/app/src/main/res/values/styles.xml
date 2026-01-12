@@ -2,14 +2,14 @@
 
     <!-- App ka main theme -->
     <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- Primary colors, agar chahe to colors.xml ke hisaab se change kar sakta hai -->
+        <!-- Yahan apne colors.xml ke naam use kar sakta hai -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
 
         <item name="android:statusBarColor">@color/purple_700</item>
 
-        <!-- Buttons ke liye MaterialComponents styles allow -->
+        <!-- Material button styles -->
         <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button</item>
         <item name="materialButtonOutlinedStyle">@style/Widget.MaterialComponents.Button.OutlinedButton</item>
     </style>
