@@ -18,7 +18,8 @@ jobs:
 
       - name: Install npm dependencies
         run: |
-          npm install --legacy-peer-deps
+          npm config set legacy-peer-deps true
+          npm install --force
 
       - name: Setup JDK
         uses: actions/setup-java@v4
