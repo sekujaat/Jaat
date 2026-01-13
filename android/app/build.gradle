@@ -1,26 +1,33 @@
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-    }
-    dependencies {
-        classpath("com.android.tools.build:gradle:8.1.0")
-    }
-}
+apply plugin: "com.android.application"
 
-allprojects {
-    repositories {
-        mavenLocal()
-        mavenCentral()
-        google()
+android {
+    namespace "com.synce"
 
-        // React Native jitne bhi AAR publish karta hai
-        maven {
-            url("$rootDir/../node_modules/react-native/android")
+    compileSdkVersion 34
+
+    defaultConfig {
+        applicationId "com.synce"
+        minSdkVersion 21
+        targetSdkVersion 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile(
+                    "proguard-android-optimize.txt"
+            ), "proguard-rules.pro"
+        }
+        debug {
+            debuggable true
         }
     }
 }
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "com.facebook.react:react-native:+"
 }
