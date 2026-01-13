@@ -1,40 +1,26 @@
-apply plugin: "com.android.application"
-
-android {
-    namespace "com.synce"          // package name
-
-    compileSdkVersion 34           // IMPORTANT
-
-    defaultConfig {
-        applicationId "com.synce"
-        minSdkVersion 21
-        targetSdkVersion 34
-        versionCode 1
-        versionName "1.0"
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
     }
+    dependencies {
+        classpath("com.android.tools.build:gradle:8.1.0")
+    }
+}
 
-    buildTypes {
-        release {
-            // Simple release, koi shrink/minify nahi
-            minifyEnabled false
-            shrinkResources false
-            proguardFiles getDefaultProguardFile(
-                    'proguard-android-optimize.txt'
-            ), 'proguard-rules.pro'
-        }
-        debug {
-            debuggable true
+allprojects {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        google()
+
+        // React Native jitne bhi AAR publish karta hai
+        maven {
+            url("$rootDir/../node_modules/react-native/android")
         }
     }
 }
 
-dependencies {
-    // libs folder (agar koi .jar ho)
-    implementation fileTree(dir: "libs", include: ["*.jar"])
-
-    // Core React Native dependency (auto‑resolved)
-    implementation "com.facebook.react:react-native:+"
-
-    // ABHI KISI AUR SDK KO MAT ADD KARO
-    // (AdMob, storage, etc. sab baad me ek‑ek karke add karenge)
+task clean(type: Delete) {
+    delete rootProject.buildDir
 }
