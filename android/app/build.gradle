@@ -1,7 +1,9 @@
 apply plugin: "com.android.application"
 
 android {
-    namespace "com.synce"   // app package name
+    namespace "com.synce"          // package name
+
+    compileSdkVersion 34           // <-- IMPORTANT: yahi missing tha
 
     defaultConfig {
         applicationId "com.synce"
@@ -25,7 +27,4 @@ android {
 
 dependencies {
     implementation "com.facebook.react:react-android:0.71.+"
-
-    // Abhi ke liye saare extra SDK hata diye,
-    // sirf React Native ka core dependency rakha hai.
 }
