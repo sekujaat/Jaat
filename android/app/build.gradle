@@ -3,7 +3,7 @@ apply plugin: "com.android.application"
 android {
     namespace "com.synce"          // package name
 
-    compileSdkVersion 34           // <-- IMPORTANT: yahi missing tha
+    compileSdkVersion 34           // IMPORTANT
 
     defaultConfig {
         applicationId "com.synce"
@@ -15,9 +15,12 @@ android {
 
     buildTypes {
         release {
+            // Simple release, koi shrink/minify nahi
             minifyEnabled false
             shrinkResources false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile(
+                    'proguard-android-optimize.txt'
+            ), 'proguard-rules.pro'
         }
         debug {
             debuggable true
@@ -26,5 +29,12 @@ android {
 }
 
 dependencies {
-    implementation "com.facebook.react:react-android:0.71.+"
+    // libs folder (agar koi .jar ho)
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+
+    // Core React Native dependency (auto‑resolved)
+    implementation "com.facebook.react:react-native:+"
+
+    // ABHI KISI AUR SDK KO MAT ADD KARO
+    // (AdMob, storage, etc. sab baad me ek‑ek karke add karenge)
 }
